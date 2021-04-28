@@ -6,6 +6,7 @@ import { Card, Navbar, Button, navbar, Form } from "react-bootstrap";
 import '../ShowAllCategories/ShowAllCategories.css'
 import "bootstrap/dist/css/bootstrap.min.css";
 import MusicPlayer from "../../Music Player/MusicPlayer";
+import { useHistory } from "react-router";
 
 
 export default function ShowAllMusics(){
@@ -13,43 +14,37 @@ const [musics,setMusic]=useState([])
 const [ImagePath,setImagePath]=useState()
 const [musicBool, setMusicBool] = useState(false);
 
-useEffect(()=>{
+let history=useHistory()
 
-let music=localStorage.getItem('music')
+useEffect(() => {
+  let token = localStorage.getItem("jwt");
+  if (!token) {
+    history.pushState("/");
+  }
 
-if(music)
-{
+  let jwt = localStorage.getItem("jwt");
+  let userId = localStorage.getItem("userId");
 
-setMusic(music)
-}
-else
-
-{
-    
-    axios.get(Server+'/getAllMusics').then((result)=>{
-console.log("the result is",result);
-
-if(result.data)
-{
-    setMusic(result.data)
-
-}
-
-})
-
-}
-setImagePath(Server+'/Podcasts/')
+  console.log("kasdf");
+  axios.get(Server+'/getAllMusics').then((result)=>{
+    // console.log("the result is",result);
+    setMusic(result.data);
+    setImagePath(Server + "/Podcasts/");
+  });
+}, []);
 
 
-    
 
-},[])
+
+
+
 
 function getMusicId(id){
 
     console.log(id);
        localStorage.setItem("musicId", id);
     setMusicBool(true);
+    history.push('/musicPlayer')
 
     }
 

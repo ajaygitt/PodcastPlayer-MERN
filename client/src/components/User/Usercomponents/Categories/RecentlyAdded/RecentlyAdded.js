@@ -41,8 +41,15 @@ export default function RecentlyAdded(props) {
     setMusicId(id);
     localStorage.setItem("musicId", id);
     setMusicBool(true);
+
+    history.push('/musicPlayer')
   }
 
+
+
+
+
+  
   return (
     <div className="body">
       <div className="row">
@@ -78,7 +85,7 @@ export default function RecentlyAdded(props) {
 
       </p>
 
-      {musicBool == true ? <MusicPlayer /> : <div></div>}
+
 
       <div id="musicplayer"></div>
     </div>

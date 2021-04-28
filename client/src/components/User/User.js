@@ -36,6 +36,7 @@ export default function User(){
     <Route path="/AddNewPodcast" > <AddNewPodcast />  </Route>
     <Route path="/music"><MusicPlayer music={music} />   </Route>
     <Route path='/showMusic'><Header/>     <ShowAllMusics/>   </Route>
+    <Route path='/musicPlayer'> <MusicPlayer/>    </Route>
 
 </Router>
 
