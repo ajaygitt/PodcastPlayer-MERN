@@ -6,6 +6,18 @@ import { Link } from 'react-router-dom'
 
 
 export default function Header() {
+
+
+let history=useHistory()
+
+  function logout(){
+
+localStorage.removeItem('jwt')
+
+
+  history.push('/')
+
+  }
    
         return (
           <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -40,6 +52,7 @@ export default function Header() {
             
             
             <Nav>
+            <Nav.Link onClick={logout}>  Logout  </Nav.Link>
               <Nav.Link>  <Link to='/profile'>   My Account </Link>  </Nav.Link>
               {/* <Nav.Link eventKey={2} href="#memes">
                 Dank memes

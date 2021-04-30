@@ -26,8 +26,8 @@ console.log("The Music Id at parent is ",MusicId);
   return (
     <div>
       <div>
-<div className="heading2 body"> 
-  <h1 id="h1"  > Recently Added {MusicId}</h1>
+<div className="heading2 "> 
+  <h1 id="h1"  > Recently Added </h1>
 </div>
       <div>
    <RecentlyAdded changeMusicId={MusicId=>setMusicId(MusicId)}/>

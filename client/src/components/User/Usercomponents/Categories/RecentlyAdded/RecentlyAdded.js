@@ -21,7 +21,7 @@ export default function RecentlyAdded(props) {
   useEffect(() => {
     let token = localStorage.getItem("jwt");
     if (!token) {
-      history.pushState("/");
+      history.push("/");
     }
 
     let jwt = localStorage.getItem("jwt");
