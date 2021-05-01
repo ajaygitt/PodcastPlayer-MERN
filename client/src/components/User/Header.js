@@ -1,8 +1,10 @@
+import axios from 'axios';
 import React, { Component } from 'react';
 
 import { navbar,NavDropdown,Form,Button,FormControl, Navbar,Nav} from 'react-bootstrap'
 import { useHistory } from 'react-router'
 import { Link } from 'react-router-dom'
+import Server from '../../Server';
 
 
 export default function Header() {
@@ -18,6 +20,9 @@ localStorage.removeItem('jwt')
   history.push('/')
 
   }
+
+
+
    
         return (
           <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -42,7 +47,7 @@ localStorage.removeItem('jwt')
 
               <NavDropdown title="My Dashboard" id="collasible-nav-dropdown">
                 <NavDropdown.Item> <Link to="/AddNewPodcast">   Add New Podcast </Link></NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2"> My Podcasts</NavDropdown.Item>
+                <NavDropdown.Item  > <Link to='/MyPodcasts'>  My Podcasts </Link></NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.3">Popular</NavDropdown.Item>
                 <NavDropdown.Divider />
                 {/* <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item> */}

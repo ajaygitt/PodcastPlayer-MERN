@@ -15,6 +15,7 @@ import MyProfile from './Usercomponents/MyProfile/MyProfile'
 import AddNewPodcast from './Usercomponents/Podcasts/AddNewPodcast/AddNewPodcast'
 import MusicPlayer from './Usercomponents/Music Player/MusicPlayer'
 import ShowAllMusics from './Usercomponents/Categories/ShowAllCategories/ShowAllCategories'
+import MyPodcasts from './Usercomponents/Categories/PodcastsbyAuthor/MyPodcast'
 
 export default function User(){
 
@@ -36,7 +37,8 @@ export default function User(){
     <Route path="/AddNewPodcast" > <AddNewPodcast />  </Route>
     <Route path="/music"><MusicPlayer music={music} />   </Route>
     <Route path='/showMusic'><Header/>     <ShowAllMusics/>   </Route>
-    <Route path='/musicPlayer'> <MusicPlayer/>    </Route>
+    <Route path='/musicPlayer'><Header/> <MusicPlayer/>    </Route>
+    <Route path="/MyPodcasts"> <Header/>       <MyPodcasts/>        </Route>
 
 </Router>
 
