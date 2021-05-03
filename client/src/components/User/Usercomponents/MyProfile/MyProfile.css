@@ -94,3 +94,7 @@
 .image{
 width: 50px;
 }
+.h5{
+    color: red;
+    font-style: italic;
+}

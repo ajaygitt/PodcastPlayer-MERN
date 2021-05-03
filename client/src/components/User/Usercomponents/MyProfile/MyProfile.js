@@ -84,7 +84,7 @@ return(
                     </div>
                     <div class="col-md-6">
                         <div class="profile-head">
-                                    <h5 >
+                                    <h5 id='name' className="h5" >
                             Name:  <span id="name"> </span>
                                     </h5>
                                     
@@ -100,7 +100,7 @@ return(
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <input type="submit" class="profile-edit-btn" name="btnAddMore" value="Edit Profile"/>
+                     
                     </div>
                 </div>
                 <div class="row">
@@ -112,7 +112,7 @@ return(
                             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <label>User Id</label>
+                                                <label className='h5'>User Id</label>
                                             </div>
                                             <div class="col-md-6">
                                                 <p id="userid">Kshiti123</p>
@@ -120,7 +120,7 @@ return(
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <label>Name</label>
+                                                <label className='h5'>Name</label>
                                             </div>
                                             <div class="col-md-6">
                                                 <p id="name2">Kshiti Ghelani</p>
@@ -136,10 +136,10 @@ return(
                                         </div> */}
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <label>Phone</label>
+                                                <label className='h5'>Phone</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p id="phone">123 456 7890</p>
+                                                <p id="phone" >123 456 7890</p>
                                             </div>
                                         </div>
                                        

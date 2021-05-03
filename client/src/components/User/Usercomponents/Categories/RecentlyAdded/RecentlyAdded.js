@@ -58,7 +58,7 @@ export default function RecentlyAdded(props) {
             return (
               <div className="cardTile">
                 <Card style={{ width: "18rem" }}>
-                  <Card.Img variant="top" src={ImagePath + data._id + ".jpg"} />
+                  <Card.Img variant="top" className="imgclass" src={ImagePath + data._id + ".jpg"} />
                   <Card.Body>
                     <Card.Title>{data.title}</Card.Title>
                     <Card.Text>{data.description}</Card.Text>

@@ -48,7 +48,7 @@ localStorage.removeItem('jwt')
               <NavDropdown title="My Dashboard" id="collasible-nav-dropdown">
                 <NavDropdown.Item> <Link to="/AddNewPodcast">   Add New Podcast </Link></NavDropdown.Item>
                 <NavDropdown.Item  > <Link to='/MyPodcasts'>  My Podcasts </Link></NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Popular</NavDropdown.Item>
+
                 <NavDropdown.Divider />
                 {/* <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item> */}
               </NavDropdown>
