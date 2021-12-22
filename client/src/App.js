@@ -9,10 +9,12 @@ function App() {
 <Router>
 
   <Route path='/'> <User/>  </Route>
+//     Route for 404 page
+//       <Route path='*'>   </Route>
+
 </Router>
 
    </div>
-
 
   );
 }
